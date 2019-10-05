@@ -1,0 +1,97 @@
+{
+  "patient": [
+    {
+      "name": "",
+      "dob": "",
+      "ssn": "",
+      "address": [
+        "",
+        // primary
+        "",
+        ""
+      ],
+      "condition": [
+        {
+          "location": {
+            "name": "",
+            "address": ""
+          },
+          "diagnosis_date": "",
+          "date_complete": "",
+          "symptom": [
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "appointment": [
+        {
+          "scheduled_date": "",
+          "scheduled_time": "",
+          "location": "",
+          // Facility type. This is the facility's UUID
+          "topic": "",
+          "patient_note": "",
+          "doctor_note": "",
+          "bill": [
+            {
+              "uuid": "",
+              "date_posted": "",
+              "amount": 0.0,
+              "payment_date": "",
+              "co-pay": 0.0,
+              "fee": [
+                {
+                  "description": "",
+                  "amount": 0.0,
+                  "facility": ""
+                  // facility UUID
+                }
+              ],
+              "method": ""
+              // UUID for user's payment method
+            }
+          ]
+        }
+      ],
+      "payment_method": [
+        {
+          "name": "",
+          "uuid": "",
+          "type": "",
+          // Type enum- cc, debit, etc
+          "active": false
+          // Could be a historical method- maybe they deactivated this CC
+        }
+      ],
+      "contact": {
+        "email": "",
+        "cell": "",
+        "home": ""
+      },
+      "emergency_contact": [
+        {
+          "name": "",
+          "relationship": "",
+          "email": "",
+          "cell": "",
+          "home": ""
+        }
+      ],
+      "medication": [
+        {
+          "name": "",
+          "brand": "",
+          "id": "",
+          // UUID for medication
+          "dosage_mg_hrly": 0.0,
+          "refill_date": "",
+          "refill_date_tolerance_days": 0,
+          "independent_refill_count": 0
+          // decremented on refill. Doctor consultation required when == 0
+        }
+      ]
+    }
+  ]
+}

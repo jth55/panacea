@@ -1,0 +1,219 @@
+{
+  "patient": [
+    {
+      "name": "Carl Smith",
+      "dob": "9/15/76",
+      "ssn": "999-99-9999",
+      "address": [
+        "935 Pennsylvania Avenue NW, Washington, D.C."
+      ],
+      "condition": [
+        {
+          "location": {
+            "name": "The White House",
+            "uuid": "7a1fa457-a55f-4b23-af25-2382f2644a82",
+            "address": "1600 Pennsylvania Ave NW, Washington, DC 20500"
+          },
+          "diagnosis_date": "9/28/18",
+          "date_complete": "10/1/19",
+          "symptom": [
+            "Stomach pain",
+            "Nausea",
+            "Headaches"
+          ]
+        }
+      ],
+      "appointment": [
+        {
+          "scheduled_date": "3/15/19",
+          "scheduled_time": "1530",
+          "location": "7a1fa457-a55f-4b23-af25-2382f2644a82",
+          "topic": "Symptom Diagnosis",
+          "patient_note": "Feels like a common cold, but worse",
+          "doctor_note": "Recommended therapy, discussed treatment plans.",
+          "bill": [
+            {
+              "uuid": "44eb4ea1-7793-4e3b-8852-9f2cb2203644",
+              "date_posted": "8/22/19",
+              "amount": 1002329.22E4,
+              "payment_date": null,
+              "co-pay": 1903.72,
+              "fee": [
+                {
+                  "description": "Blood Test",
+                  "amount": 87.0,
+                  "facility": "7a1fa457-a55f-4b23-af25-2382f2644a82"
+                }
+              ],
+              "payment_method": "52f678c4-72c0-43e3-9fea-d829fdd5223d"
+            }
+          ]
+        }
+      ],
+      "payment_method": [
+        {
+          "name": "visa",
+          "uuid": "52f678c4-72c0-43e3-9fea-d829fdd5223d",
+          "type": "credit card",
+          "active": true
+        },
+        {
+          "name": "bank",
+          "uuid": "81b2207c-e0fc-40a6-910a-b2ed2cb72c67",
+          "type": "bank",
+          "active": false
+        }
+      ],
+      "contact": {
+        "email": "csmith@e.com",
+        "cell": "+1-202-555-0167",
+        "home": "+1-303-555-0100"
+      },
+      "emergency_contact": [
+        {
+          "name": "Karen Smith",
+          "relationship": "Mother",
+          "email": "ksmith@emailexample.com",
+        	"cell": "+1-385-555-0184",
+        	"home": "+1-907-555-0184"
+        },
+        {
+          "name": "Bill Warren",
+          "relationship": "Friend",
+          "email": "bill.warren@tutanota.com",
+        	"cell": "+1-404-555-0108",
+        	"home": "+1-317-555-0191"
+        }
+      ],
+      "medication": [
+        {
+          "name": "Ondansetron",
+          "brand": "Zofran",
+          "id": "81ed6c68-8482-472a-a8ac-61c6b2051abb",
+          "dosage_mg": "30 12 * * 1",
+          "refill_date": "11/05/19",
+          "refill_date_tolerance_days": 1,
+          "independent_refill_count": 1
+        },
+        {
+          "name": "Promethazine",
+          "brand": "Promethegan",
+          "id": "7a6e8e3a-e4bd-463b-8bdc-e5e32c4adc69",
+          "dosage_mg": "0 15 * * * *",
+          "refill_date": "11/05/19",
+          "refill_date_tolerance_days": 7,
+        	"independent_refill_count": 5
+        }
+      ]
+    },
+
+
+
+    {
+      "name": "Todd Richardson",
+      "dob": "12/21/67",
+      "ssn": "888-88-8888",
+      "address": [
+        "935 Pennsylvania Avenue NW, Washington, D.C."
+      ],
+      "condition": [
+        {
+          "location": {
+            "name": "The White House",
+            "uuid": "21fe4a6a-33c3-4085-a546-fb8f58d0c8e2",
+            "address": "1600 Pennsylvania Ave NW, Washington, DC 20500"
+          },
+          "diagnosis_date": "4/27/15",
+          "date_complete": "2/1/17",
+          "symptom": [
+            "Stomach pain",
+            "Weight Loss",
+            "Fever"
+          ]
+        }
+      ],
+      "appointment": [
+        {
+          "scheduled_date": "5/9/16",
+          "scheduled_time": "1245",
+          "location": "1e858fa4-6b22-46da-8f18-f4519a262b95",
+          "topic": "Symptom Diagnosis",
+          "patient_note": "I don't feel so good",
+          "doctor_note": "Further testing required",
+          "bill": [
+            {
+              "uuid": "58daf83e-dda8-4de3-b8d8-295c8ef6e50f",
+              "date_posted": "5/9/16",
+              "amount": 1002329.22E4,
+              "payment_date": "5/15/16",
+              "co-pay": 1342.44,
+              "fee": [
+                {
+                  "description": "Blood Test",
+                  "amount": 83.0,
+                  "facility": "8e060d81-5502-44f6-ae66-552da248dc27"
+                }
+              ],
+              "payment_method": "1fa05b6d-6599-4eeb-b941-7ba83e79196a"
+            }
+          ]
+        }
+      ],
+      "payment_method": [
+        {
+          "name": "visa",
+          "uuid": "248dad9d-20ae-4c49-bc49-35afd5b4224d",
+          "type": "credit card",
+          "active": true
+        },
+        {
+          "name": "bank",
+          "uuid": "63464128-1f57-43d1-805a-b9017209535f",
+          "type": "bank",
+          "active": false
+        }
+      ],
+      "contact": {
+        "email": "trichardson@emailexample.com",
+        "cell": "+1-222-555-0167",
+        "home": "+1-404-555-0100"
+      },
+      "emergency_contact": [
+        {
+          "name": "Rick Richardson",
+          "relationship": "Brother",
+          "email": "rrichardson@emailexample.com",
+        	"cell": "+1-265-555-0184",
+        	"home": "+1-447-555-0184"
+        },
+        {
+          "name": "Steven Johnson",
+          "relationship": "Friend",
+          "email": "sjohnson@emailexample.com",
+        	"cell": "+1-994-555-0108",
+        	"home": "+1-876-555-0191"
+        }
+      ],
+      "medication": [
+        {
+          "name": "Ondansetron",
+          "brand": "Zofran",
+          "id": "8c304488-b37a-430d-bddd-37281a2c3076",
+          "dosage": 12.0,
+          "refill_date": "",
+          "refill_date_tolerance_days": 0,
+        	"independent_refill_count": 0
+        },
+        {
+          "name": "Zofran",
+          "brand": "",
+          "id": "",
+          "dosage_mg": 0.0,
+          "refill_date": "",
+          "refill_date_tolerance_days": 0,
+        	"independent_refill_count": 0
+        }
+      ]
+    }
+  ]
+}
