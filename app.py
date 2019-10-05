@@ -48,13 +48,10 @@ def login():
 def dashboard():
     return render_template('dashboard.html', patient=mm.patient)
 
-@app.route('/teams', methods=['GET', 'POST'])
+@app.route('/scheduling', methods=['GET', 'POST'])
 @login_required
-def teams():
-
+def scheduling():
     success = error = team = 0  # Set false/none
-
-
     if 'view' in request.args:
         try:
             team_id = int(request.args['view'])
@@ -114,135 +111,15 @@ def teams():
     return render_template('teams.html', r=mm.run, d=mm.dest, teams=mm.teams, error=error)
 
 
-@app.route('/systems', methods=['GET', 'POST'])
+@app.route('/pricing', methods=['GET', 'POST'])
 @login_required
-def systems():
+def pricing():
+    return render_template('pricing.html', patient=mm.patient)
 
-    success = error = system = 0  # Set false/none
-
-    if 'view' in request.args:
-        try:
-            system_num = int(request.args['view'])
-            system = mm.teams[0].systems[system_num - 1]
-        except:
-            error = "Invalid system number."
-            return render_template('systems.html', r=mm.run, d=mm.dest, systems=mm.teams[0].systems, error=error)
-        if request.method == 'GET':
-            if 'team' in request.args:
-                try:
-                    team_id = int(request.args['team'])
-                    team = mm.teams[team_id - 1]
-                    system = team.systems[system_num - 1]
-                except:
-                    error = "Invalid team ID."
-                    return render_template('systems.html', r=mm.run, d=mm.dest, systems=mm.teams[0].systems, error=error)
-                return render_template('system_team_details.html', r=mm.run, d=mm.dest, system=system, team=team)
-            for team in mm.teams:
-                systems.append(team.systems[system_num - 1])
-            return render_template('system_details.html', r=mm.run, d=mm.dest, systems=systems)
-
-    if request.method == 'POST':
-
-        if 'action' in request.form:
-            if request.form['action'] == 'edit' or request.form['action'] == 'add':
-                return render_template('system_edit.html', r=mm.run, d=mm.dest, system=system)
-
-            if request.form['action'] == 'cancel':
-                return render_template('system_team_details.html', r=mm.run, d=mm.dest, system=system)
-
-            if request.form['action'] == 'save':
-                try:
-                    if request.form['name'] != "":
-                        name = request.form['name']
-                    # character whitelist here
-                except:
-                    error = "Invalid characters in system name."
-                    name = ""
-                try:
-                    if request.form['os'] != "":
-                        os = request.form['os']
-                    # regex matching here
-                except:
-                    error = "Invalid operating system."
-                    os = ""
-                try:
-                    if request.form['flavor'] != "":
-                        flavor = request.form['flavor']
-                    # regex matching here
-                except:
-                    error = "Invalid flavor."
-                    flavor = ""
-                try:
-                    if request.form['ip'] != "":
-                        ip = request.form['ip']
-                    # diffiulty integer within range test here
-                except:
-                    error = "Invalid IP Address."
-                    ip = ""
-                if not error:
-                    if system == 0:
-                        if name and os and flavor and ip:
-                            success = 1
-                            for team in mm.teams:
-                                system_info = (sys_num, "Inactive", name, team.id, team.ip + str(ip), os, flavor, sys_vulns)
-                                team.systems.append(System("new", *system_info))
-                        else:
-                            error = "All forms must be filled."
-                    else:
-                        for team in mm.teams:
-                            system = team[system_num - 1]
-                            system.name = name
-                            system.os = os
-                            system.flavor = flavor
-                            system.ip = ip
-                            system.save()
-                    return render_template('systems.html', r=mm.run, d=mm.dest,  system=system, success=success, error=error)
-
-    return render_template('systems.html', r=mm.run, d=mm.dest, systems=mm.teams[0].systems, error=error)
-
-
-@app.route('/modules', methods=['GET', 'POST'])
-def modules():
-    modules = db.getall('modules')
-    return render_template('modules.html', r=mm.run, d=mm.dest, modules=modules)
-
-@app.route('/engine', methods=['GET', 'POST'])
-def engine():
-
-    error = ""
-    if request.method == 'POST':
-        if request.form['action'] == 'start':
-            if mm.msfrpc_loaded:
-                mm.run = 1
-            else:
-                error = "MSFRPC isn't done initializing yet, sorry :("
-        elif request.form['action'] == 'stop':
-            mm.run = 0
-        elif request.form['action'] == 'enable_destruction':
-            mm.dest = 1
-        elif request.form['action'] == 'disable_destruction':
-            mm.dest = 0
-        elif request.form['action'] == 'export':
-            return ("config")
-
-    proc = subprocess.Popen(['tail', '-n', '10', 'app.log'],
-                            stdout=subprocess.PIPE)
-    log_data = proc.stdout.readlines()
-    log_data = [log.decode('utf-8').split(' ')[5:] for log in log_data]
-    log_data = [" ".join(log) for log in log_data]
-    return render_template('engine.html',
-                           r=mm.run,
-                           d=mm.dest,
-                           cyc=mm.cycles,
-                           log_data=log_data[::-1],
-                           error=error,
-                           autostart=mm.autostart)
-
-
-@app.route('/workshop', methods=['GET', 'POST'])
-def workshop():
-
-    return render_template('workshop.html', r=mm.run, d=mm.dest)
+@app.route('/options', methods=['GET', 'POST'])
+@login_required
+def options():
+    return render_template('options.html')
 
 # Launch web server
 logging.info("Running web server.")

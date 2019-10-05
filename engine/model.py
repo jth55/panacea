@@ -70,6 +70,9 @@ class Patient(object):
         self.visits = [("Appointment at Sanford Health Center", "3PM Sunday", "ical", "maps"), \
         ("Chemotherapy at the Sanford Cancer Center", "1PM Monday", "ical", "maps")]
         self.prescriptions = [("Zofran", "Take 8:00 AM Daily"), ("Promethegan", "Take Tuesday, Saturday")]
+        self.bills = [("Radiology visit at Sanford Health", "October 21", "12,798", "Unpaid")]
+        self.paid = [("Radiology visit at Sanford Health", "October 12", "300", "paid")]
+
 
     def __str__(self):
         return ("Patient %s", self.name)
