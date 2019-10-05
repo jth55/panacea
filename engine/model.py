@@ -23,12 +23,13 @@ class MetaModel(object):
         self.patient = Patient("Debra")
 
 class Patient(object):
-    def __init__(self, name):# pass in laterentered_patient_json = "data/patientData0.json"
+    def __init__(self, name):# pass in later
 
-pj = get_json(entered_patient_json)
+        entered_patient_json = "data/patientData0.json"
 
-        #
+        pj = get_json(entered_patient_json)
 
+        #self.name = pj
         self.name = name
         self.visits = [("Appointment at Sanford Health Center", "3PM Sunday", "ical", "maps"), \
         ("Chemotherapy at the Sanford Cancer Center", "1PM Monday", "ical", "maps")]

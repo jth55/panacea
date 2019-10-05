@@ -16,62 +16,95 @@
           },
           "diagnosis_date": "11/28/14",
           "date_complete": "",
-          "symptom": [
+          "symptoms": [
             "Blood in urine",
             "Hard of hearing",
             "Partial vision loss"
-          ],
-          "predictions": [
-            {
-              "chance": 21,
-              "condition": "Hypertensive Heart Disease"
-            },
-            {
-              "chance": 62,
-              "condition": "Alport Syndrome"
-            },
-            {
-              "chance": 9,
-              "condition": "Glaucoma"
-            }
           ]
         }
       ],
-      "quizzes": [
+     "action_items": [
         {
-          "date": "09/09/09",
-          "source": "Facebook",
-          "questions": [
-            "Are you feeling any pain today?": "Yes",
-            "How long has the event lasted?": "> 18hrs",
-            "Do you suspect that the cause of your pain is undiagnosed?": "Yes",
-            "Would you like to chat with a physician?": "No"
-          ]
-        },
-        {
-          "date": "12/17/10",
-          "source": "Buzzfeed",
-          "questions": [
-            "Do you have any questions about healthcare?": "No",
-            "Are you content with your healthcare provider?": "Yes"
-          ]
+        "item1": "Schedule a yearly heatlh checkup (<i>Dr. Harth</i>) (Oct 5 2019)",
+        "item2": "Come in for your flu shot (<i>Dr. Wilder</i>) (Oct 1 2019)",
+        "item3": "Call me for your post-op checkup (<i>Dr. Harth</i>) (Sep 26 2019"
         }
-      ]
+     ],
+     "analytics": [
+        {
+	     "predictions": [
+		    {
+		      "chance": 21,
+		      "condition": "Hypertensive Heart Disease"
+		    },
+		    {
+		      "chance": 62,
+		      "condition": "Alport Syndrome"
+		    },
+		    {
+		      "chance": 9,
+		      "condition": "Glaucoma"
+		    }
+          ],
+	      "quizzes": [
+		    {
+		      "date": "09/09/09",
+		      "source": "Facebook",
+		      "questions": [
+                {
+		        "Are you feeling any pain today?": "Yes",
+		        "How long has the event lasted?": "> 18hrs",
+		        "Do you suspect that the cause of your pain is undiagnosed?": "Yes",
+		        "Would you like to chat with a physician?": "No"
+                }		      
+              ]
+		    },
+		    {
+		      "date": "12/17/10",
+		      "source": "Buzzfeed",
+		      "questions": [
+                {
+		        "Do you have any questions about healthcare?": "No",
+		        "Are you content with your healthcare provider?": "Yes"
+                }		      
+              ]
+		    }
+           ]
+          }
+	    ],
       "appointment": [
         {
-          "scheduled_date": "3/15/19",
+          "scheduled_date": "10/8/19",
           "scheduled_time": "1530",
           "location": "7a1fa457-a55f-4b23-af25-2382f2644a82",
           "topic": "Symptom Diagnosis",
-          "patient_note": "Feels like a common cold, but worse",
-          "doctor_note": "Recommended therapy, discussed treatment plans.",
+          "patient_note": "N/A",
+          "doctor_note": "Health checkup",
           "bill": [
             {
               "uuid": "44eb4ea1-7793-4e3b-8852-9f2cb2203644",
               "date_posted": "8/22/19",
-              "amount": 1002329.22E4,
+              "amount": 100,
               "payment_date": null,
-              "co-pay": 1903.72,
+              "co-pay": 20,
+              "payment_method": "52f678c4-72c0-43e3-9fea-d829fdd5223d"
+            }
+          ]
+        },
+        {
+          "scheduled_date": "10/10/19",
+          "scheduled_time": "1130",
+          "location": "7a1fa457-a55f-4b23-af25-2382f2644a82",
+          "topic": "Chemotherapy Appointment",
+          "patient_note": "",
+          "doctor_note": "Round 3 of 10",
+          "bill": [
+            {
+              "uuid": "44eb4ea1-7793-4e3b-8852-9f2cb2203644",
+              "date_posted": "10/8/19",
+              "amount": 2000,
+              "payment_date": null,
+              "co-pay": 500,
               "fee": [
                 {
                   "description": "Blood Test",
@@ -139,6 +172,6 @@
         	"independent_refill_count": 5
         }
       ]
-    },
+    }
   ]
 }
