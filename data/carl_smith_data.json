@@ -1,0 +1,117 @@
+{
+  "patient": [
+    {
+      "name": "Carl Smith",
+      "dob": "9/15/76",
+      "ssn": "999-99-9999",
+      "address": [
+        "935 Pennsylvania Avenue NW, Washington, D.C."
+      ],
+      "condition": [
+        {
+          "location": {
+            "name": "The White House",
+            "uuid": "7a1fa457-a55f-4b23-af25-2382f2644a82",
+            "address": "1600 Pennsylvania Ave NW, Washington, DC 20500"
+          },
+          "diagnosis_date": "9/28/18",
+          "date_complete": "10/1/19",
+          "symptom": [
+            "Stomach pain",
+            "Nausea",
+            "Headaches"
+          ]
+        }
+      ],
+      "appointment": [
+        {
+          "scheduled_date": "3/15/19",
+          "scheduled_time": "1530",
+          "location": "7a1fa457-a55f-4b23-af25-2382f2644a82",
+          "topic": "Symptom Diagnosis",
+          "patient_note": "Feels like a common cold, but worse",
+          "doctor_note": "Recommended therapy, discussed treatment plans.",
+          "bill": [
+            {
+              "uuid": "44eb4ea1-7793-4e3b-8852-9f2cb2203644",
+              "date_posted": "8/22/19",
+              "amount": 1002329.22E4,
+              "payment_date": null,
+              "co-pay": 1903.72,
+              "fee": [
+                {
+                  "description": "Blood Test",
+                  "amount": 87.0,
+                  "facility": "7a1fa457-a55f-4b23-af25-2382f2644a82"
+                }
+              ],
+              "payment_method": "52f678c4-72c0-43e3-9fea-d829fdd5223d",
+              "paid": false
+            }
+          ]
+        }
+      ],
+      "payment_method": [
+        {
+          "name": "visa",
+          "uuid": "52f678c4-72c0-43e3-9fea-d829fdd5223d",
+          "type": "credit card",
+          "active": true
+        },
+        {
+          "name": "bank",
+          "uuid": "81b2207c-e0fc-40a6-910a-b2ed2cb72c67",
+          "type": "bank",
+          "active": false
+        }
+      ],
+      "contact": {
+        "email": "csmith@e.com",
+        "cell": "+1-202-555-0167",
+        "home": "+1-303-555-0100"
+      },
+      "emergency_contact": [
+        {
+          "name": "Karen Smith",
+          "relationship": "Mother",
+          "email": "ksmith@emailexample.com",
+        	"cell": "+1-385-555-0184",
+        	"home": "+1-907-555-0184"
+        },
+        {
+          "name": "Bill Warren",
+          "relationship": "Friend",
+          "email": "bill.warren@tutanota.com",
+        	"cell": "+1-404-555-0108",
+        	"home": "+1-317-555-0191"
+        }
+      ],
+      "medication": [
+        {
+          "name": "Ondansetron",
+          "brand": "Zofran",
+          "id": "81ed6c68-8482-472a-a8ac-61c6b2051abb",
+          "dosage_mg": "30 12 * * 1",
+          "refill_date": "11/05/19",
+          "refill_date_tolerance_days": 1,
+          "independent_refill_count": 1
+        },
+        {
+          "name": "Promethazine",
+          "brand": "Promethegan",
+          "id": "7a6e8e3a-e4bd-463b-8bdc-e5e32c4adc69",
+          "dosage_mg": "0 15 * * * *",
+          "refill_date": "11/05/19",
+          "refill_date_tolerance_days": 7,
+        	"independent_refill_count": 5
+        }
+      ],
+      "action_items": [
+        {
+            "message": "Please come in for your yearly checkup",
+            "author": "Dr. Harth",
+            "date": "10/5/19"
+        }
+      ]
+    }
+}
