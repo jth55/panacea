@@ -1,0 +1,90 @@
+{% extends 'layout.html' %}
+
+{% block title %} My File {% endblock %}
+{% block header %} <h1>Hello, {{ patient.name }} </h1> {% endblock %}
+{% set active_page = "dashboard" %}
+
+{% block body %}
+
+    <div class="row justify-content-center mt-4 mb-2">
+
+	    <div class="col-sm-10">
+
+        <div class="alert alert-success text-center" role="alert">
+          <b>Hey {{ patient.name }}, you're all caught up!</b>
+        </div>
+
+      </div>
+
+    </div>
+
+    <h4 class="py-3">My Upcoming Visits</h4>
+
+    {% for visit in patient.visits %}
+
+    <div class="row justify-content-center p-3 mt-1 bg-light" style="font-size:1.2em;">
+        <div class="col-6">
+              <a class="text-body" href="/systems">
+                  <b>{{ visit[0] }}</b>
+              </a>
+        </div>
+        <div class="col-auto">
+            <span class="text-primary" data-feather="clock"></span>
+            {{ visit[1] }}
+        </div>
+        <div class="col-auto">
+            <span class="text-primary" data-feather="calendar"></span>
+            <a href="{{ visit[2] }}">Add Reminder</a>
+        </div>
+        <div class="col-auto">
+            <span class="text-primary" data-feather="map-pin"></span>
+            <a href="{{ visit[3] }}">Maps</a>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+
+    <h4 class="py-3 pt-5">My Prescriptions</h4>
+
+
+    {% for prescription in patient.prescriptions %}
+
+
+    <div class="row justify-content-center p-3 mt-1 bg-light text-left" style="font-size:1.2em;">
+        <div class="col-3">
+              <a class="text-body" href="/systems">
+                  <b>{{ prescription[0] }}</b>
+              </a>
+        </div>
+        <div class="col-4">
+            <span class="text-primary" data-feather="clock"></span>
+            {{ prescription[1] }}
+        </div>
+
+        <div class="col-3">
+          <span class="text-primary" data-feather="calendar"></span>
+            <a href="{{ prescription[2] }}">Add Reminder</a>
+        </div>
+        <div class="col-2">
+            <span class="text-primary" data-feather="activity"></span>
+            <a href="{{ prescription[2] }}">Refill</a>
+        </div>
+    </div>
+
+    {% endfor %}
+
+
+    <div class="row text-right">
+      <div class="col-sm-10">
+        <pDownload your file
+
+        <div class="row justify-content-end mt-5">
+          <a href="static/file.pdf"><button type="submit" class="btn btn-success">Download My File</button></a>
+        </div>
+
+	    </div>
+    </div>
+
+{% endblock %}

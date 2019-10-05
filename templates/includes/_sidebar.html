@@ -1,0 +1,40 @@
+<nav class="col-md-auto d-none d-md-block bg-light sidebar" style="font-size: 1.2em;">
+
+  <div class="sidebar-sticky pl-3 pr-4 mt-2">
+
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link {% if active_page == 'dashboard' %} active {% endif %}" href="/">
+          <span data-feather="home"></span>
+          My File
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if active_page == 'analytics' %} active {% endif %}" href="teams">
+          <span data-feather="users"></span>
+          Analytics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if active_page == 'pricing' %} active {% endif %}" href="systems">
+          <span data-feather="terminal"></span>
+          Pricing
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if active_page == 'scheduling' %} active {% endif %}" href="modules">
+          <span data-feather="crosshair"></span>
+          Scheduling
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if active_page == 'options' %} active {% endif %}" href="engine">
+          <span data-feather="activity"></span>
+          Options
+        </a>
+      </li>
+      </ul>
+
+
+  </div>
+</nav>
