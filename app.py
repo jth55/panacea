@@ -4,6 +4,7 @@ from engine import model
 from threading import Thread
 from hashlib import sha256
 import logging, os, subprocess, sys, random
+import json
 
 # Flask information
 app = Flask(__name__)
@@ -51,75 +52,49 @@ def dashboard():
 @app.route('/scheduling', methods=['GET', 'POST'])
 @login_required
 def scheduling():
-    success = error = team = 0  # Set false/none
-    if 'view' in request.args:
-        try:
-            team_id = int(request.args['view'])
-        except:
-            error = "Invalid team ID."
-        try:
-            team = mm.teams[int(team_id) - 1]
-        except:
-            error = "Team ID doesn't exist."
-        if error:
-            return render_template('teams.html',r=mm.run,
-                           d=mm.dest, teams=mm.teams, error=error)
-        if request.method == 'GET':
-            return render_template('team_details.html', r=mm.run, d=mm.dest, team=team)
-
-    if request.method == 'POST':
-
-        if 'action' in request.form:
-            if request.form['action'] == 'edit' or request.form['action'] == 'add':
-                return render_template('team_edit.html', r=mm.run, d=mm.dest, team=team)
-
-            if request.form['action'] == 'cancel':
-                if team:
-                    return render_template('team_details.html', r=mm.run, d=mm.dest, team=team)
-                else:
-                    return render_template('teams.html', r=mm.run, d=mm.dest)
-
-
-            if request.form['action'] == 'save':
-                    try:
-                        if request.form['name'] != "":
-                            name = request.form['name']
-                        # character whitelist here
-                    except:
-                        error = "Invalid characters in team name."
-                    try:
-                        if request.form['ip'] != "":
-                            ip = request.form['ip']
-                        # regex matching here
-                    except:
-                        error = "Invalid IP address format."
-                    try:
-                        difficulty = request.form['difficulty']
-                        # diffiulty integer within range test here
-                    except:
-                        error = "Invalid difficulty."
-                    if not error:
-                        success = 1
-                        if team == 0:
-                            team_info = (name, ip, difficulty)
-                            mm.write_team(team_info)
-                            return render_template('teams.html', r=mm.run, d=mm.dest, teams=mm.teams, success=success)
-                        else:
-                            team.save()
-                            return render_template('team_details.html', r=mm.run, d=mm.dest, team=team, success=success)
-
-    return render_template('teams.html', r=mm.run, d=mm.dest, teams=mm.teams, error=error)
-
+    return render_template('scheduling.html', patient=mm.patient)
 
 @app.route('/pricing', methods=['GET', 'POST'])
 @login_required
 def pricing():
     return render_template('pricing.html', patient=mm.patient)
 
+@app.route('/analytics', methods=['GET', 'POST'])
+@login_required
+def analytics():
+    return render_template('analytics.html', patient=mm.patient)
+
 @app.route('/options', methods=['GET', 'POST'])
 @login_required
 def options():
     return render_template('options.html')
+
+
+def get_json():
+    """Returns json data for specified patient UUID, demo uses test json data """
+    with open("data/patientData0.json", "r") as json_file:
+        return json.load(json_file)
+
+
+@app.route('/api', methods=['POST'])
+def get_api_data():
+    """Read only load view for a patient UUID and a specified key"""
+    # We only have one patient for now, so uuid field is ignored
+    patient_uuid = request.form.get('UUID')
+    key = request.form.get('key')
+
+    json_data = get_json()
+
+    # Auth and scoping are not implemented in the sample
+    # Could restrict with auth and key scope to only certain keys
+
+    response = app.response_class(
+        response=json.dumps(json_data['patient'][key]),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
+
 
 # Launch web server
 logging.info("Running web server.")
