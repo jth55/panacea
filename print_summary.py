@@ -2,7 +2,7 @@ import json
 
 
 def main():
-    with open("./data/schema.json") as f:
+    with open("./data/patientData0.json") as f:
         data = json.load(f)
         print(f"Carl's name: {data['patient'][0]['name']}")
 
