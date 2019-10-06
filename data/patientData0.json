@@ -157,7 +157,7 @@
           "name": "Ondansetron",
           "brand": "Zofran",
           "id": "81ed6c68-8482-472a-a8ac-61c6b2051abb",
-          "dosage_mg": "30 12 * * 1",
+          "dosage_mg": "Take 8:00 AM Daily",
           "refill_date": "11/05/19",
           "refill_date_tolerance_days": 1,
           "independent_refill_count": 1
@@ -166,7 +166,7 @@
           "name": "Promethazine",
           "brand": "Promethegan",
           "id": "7a6e8e3a-e4bd-463b-8bdc-e5e32c4adc69",
-          "dosage_mg": "0 15 * * * *",
+          "dosage_mg": "Take Tuesday, Saturday",
           "refill_date": "11/05/19",
           "refill_date_tolerance_days": 7,
         	"independent_refill_count": 5
