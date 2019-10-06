@@ -10,9 +10,3 @@ Requirements:
 
 Usage:
 `python3 app.py`
-
-## Screenshots
-
-
-
-## How it Works

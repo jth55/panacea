@@ -36,7 +36,7 @@
             <span class="text-primary" data-feather="calendar"></span>
             <a href="{{ visit[2] }}">Add Reminder</a>
         </div>
-        <div class="col-auto">
+        <div class="col-3">
             <span class="text-primary" data-feather="map-pin"></span>
             <a href="{{ visit[3] }}">Maps</a>
         </div>
@@ -76,15 +76,14 @@
     {% endfor %}
 
 
-    <div class="row text-right">
+    <div class="row justify-content-end my-5">
       <div class="col-sm-10">
-        <pDownload your file
 
-        <div class="row justify-content-end mt-5">
-          <a href="static/file.pdf"><button type="submit" class="btn btn-success">Download My File</button></a>
-        </div>
 
-	    </div>
-    </div>
+          <a href="static/carl_smith.pdf"><button type="submit" class="btn btn-success">Download My File PDF</button></a>
+          <a href="data/patientData0.json"><button type="submit" class="btn btn-success">Download JSON File</button></a>
+
+          </div>
+      </div>
 
 {% endblock %}

@@ -10,13 +10,9 @@
 
 	    <div class="col-sm-12">
 
-
-
-        <div class="alert alert-success text-center" role="alert">
-          <b>You have no unpaid bills.</b>
+        <div class="alert alert-warning text-center" role="alert">
+          <b>You have some unpaid bills.</b>
         </div>
-
-
 
       </div>
 
@@ -32,23 +28,22 @@
                   <b>{{ bill[0] }}</b>
               </a>
         </div>
-        <div class="col-2">
-            <span class="text-primary" data-feather="calendar"></span>
+        <div class="col-auto">
+            <span class="text-primary" data-feather="map-pin"></span>
             {{ bill[1] }}
         </div>
-        <div class="col-2">
-            <span class="text-primary" data-feather="dollar-sign"></span>
-            {{ bill[2] }}
+        <div class="col-auto">
+            <span class="text-primary" data-feather="calendar"></span>
+            <a href="{{ bill[2] }}">Add Reminder</a>
         </div>
-        <div class="col-2">
-            <span class="text-primary" data-feather="check"></span>
-            {{ bill[3] }}
+        <div class="col-auto">
+            <span class="text-primary" data-feather="dollar-sign"></span>
+            <a href="{{ bill[3] }}">Maps</a>
         </div>
 
     </div>
 
     {% endfor %}
-
 
 
     <h4 class="py-3 pt-5">Paid Bills</h4>
@@ -62,26 +57,22 @@
                   <b>{{ bill[0] }}</b>
               </a>
         </div>
-        <div class="col-2">
-            <span class="text-primary" data-feather="calendar"></span>
+        <div class="col-auto">
+            <span class="text-primary" data-feather="map-pin"></span>
             {{ bill[1] }}
         </div>
-        <div class="col-2">
-            <span class="text-primary" data-feather="dollar-sign"></span>
-            {{ bill[2] }}
+        <div class="col-auto">
+            <span class="text-primary" data-feather="calendar"></span>
+            <a href="{{ bill[2] }}">Add Reminder</a>
         </div>
-        <div class="col-2">
-            <span class="text-primary" data-feather="check"></span>
-            {{ bill[3] }}
+        <div class="col-auto">
+            <span class="text-primary" data-feather="dollar-sign"></span>
+            <a href="{{ bill[3] }}">Maps</a>
         </div>
 
     </div>
-
 
     {% endfor %}
 
-    <div class="row pt-5 justify-content-center">
-      <a href="/estimate_price.html"><button type="button" class="btn btn-primary">Get a Price Estimate for a Visit</button></a>
-    </div>
 
 {% endblock %}

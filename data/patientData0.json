@@ -56,7 +56,7 @@
 		        "How long has the event lasted?": "> 18hrs",
 		        "Do you suspect that the cause of your pain is undiagnosed?": "Yes",
 		        "Would you like to chat with a physician?": "No"
-                }		      
+                }
               ]
 		    },
 		    {
@@ -66,7 +66,7 @@
                 {
 		        "Do you have any questions about healthcare?": "No",
 		        "Are you content with your healthcare provider?": "Yes"
-                }		      
+                }
               ]
 		    }
            ]
@@ -93,7 +93,7 @@
         },
         {
           "scheduled_date": "10/10/19",
-          "scheduled_time": "October 10 at 11:30am",
+          "scheduled_time": "October 10 at 1:30pm",
           "location": "Chemotherapy at the Sanford Cancer Center",
           "topic": "Chemotherapy Appointment",
           "patient_note": "",

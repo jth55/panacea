@@ -69,6 +69,11 @@ def analytics():
 def options():
     return render_template('options.html')
 
+@app.route('/pubkey_repo', methods=['GET', 'POST'])
+@login_required
+def pkrepo():
+    return render_template('pubkey_repo.html')
+
 
 def get_json():
     """Returns json data for specified patient UUID, demo uses test json data """

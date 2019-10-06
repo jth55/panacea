@@ -30,7 +30,7 @@
 <p style="font-size:1.6em;" class="pl-5"><a href="ask-question">Ask a question</a></p>
 <p style="font-size:1.6em;" class="pl-5"><a href="schedule-appointment"></a></p>
 
-<h4 class="pt-2">My Upcoming Appointments</h4>
+<h4 class="py-2">My Upcoming Appointments</h4>
 
     {% for visit in patient.visits %}
 
@@ -58,5 +58,9 @@
 
     {% endfor %}
 
+
+    <div class="row pt-4 justify-content-center">
+      <a href="/estimate_price.html"><button type="button" class="btn btn-primary">Get a Price Estimate for a Visit</button></a>
+    </div>
 
 {% endblock %}

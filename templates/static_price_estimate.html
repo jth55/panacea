@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %} Pricing Estimate {% endblock %}
+{% block header %}<h1>Pricing</h1>{% endblock %}
+{% set active_page = "pricing" %}
+
+{% block body %}
+
+    <div class="row justify-content-center mt-4 mb-2">
+
+	    <div class="col-sm-12">
+
+        <div class="alert alert-warning text-center" role="alert">
+          <b>You have some unpaid bills.</b>
+        </div>
+
+      </div>
+
+    </div>
+
+    <h4 class="py-3">Unpaid Bills</h4>
+
+
+
+
+{% endblock %}

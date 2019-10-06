@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block title %} Public Key Repository {% endblock %}
+{% block header %}<h1>Public Key Repository</h1> {% endblock %}
+{% set active_page = "pubkey" %}
+
+{% block body %}
+
+
+<h4 class="py-2">Available Public Keys</h4>
+
+    <div class="row justify-content-center p-3 mt-1" style="font-size:1.2em;">
+        <div class="col-6">
+              <a class="text-body" href="/systems">
+                  <b>John Hopkins</b>
+              </a>
+        </div>
+        <div class="col-6">
+            <span class="text-primary" data-feather="command"></span>
+            <a href="/static/pubkey1">Download Public Key</a>
+        </div>
+
+    </div>
+
+    <div class="row justify-content-center p-3 mt-1 bg-light" style="font-size:1.2em;">
+        <div class="col-6">
+              <a class="text-body" href="/systems">
+                  <b>Sanford Health</b>
+              </a>
+        </div>
+        <div class="col-6">
+            <span class="text-primary" data-feather="command"></span>
+            <a href="/static/SanfordKey.pub">Download Public Key</a>
+        </div>
+
+    </div>
+
+{% endblock %}
