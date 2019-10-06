@@ -75,7 +75,7 @@
       "appointment": [
         {
           "scheduled_date": "10/8/19",
-          "scheduled_time": "1530",
+          "scheduled_time": "October 8 at 3:30pm",
           "location": "Appointment at Sanford Health Center",
           "topic": "Symptom Diagnosis",
           "patient_note": "N/A",
@@ -93,7 +93,7 @@
         },
         {
           "scheduled_date": "10/10/19",
-          "scheduled_time": "1130",
+          "scheduled_time": "October 10 at 11:30am",
           "location": "Chemotherapy at the Sanford Cancer Center",
           "topic": "Chemotherapy Appointment",
           "patient_note": "",
