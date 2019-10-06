@@ -85,7 +85,7 @@
               "uuid": "44eb4ea1-7793-4e3b-8852-9f2cb2203644",
               "date_posted": "8/22/19",
               "amount": 100,
-              "payment_date": null,
+              "payment_date": "8/22/19",
               "co-pay": 20,
               "payment_method": "52f678c4-72c0-43e3-9fea-d829fdd5223d"
             }
