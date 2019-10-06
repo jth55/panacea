@@ -1,0 +1,177 @@
+{
+  "patient": [
+    {
+      "name": "Carl Smith",
+      "dob": "9/15/97",
+      "ssn": "999-99-9999",
+      "address": [
+        "935 Pennsylvania Avenue NW, Washington, D.C."
+      ],
+      "condition": [
+        {
+          "location": {
+            "name": "The White House",
+            "uuid": "7a1fa457-a55f-4b23-af25-2382f2644a82",
+            "address": "1600 Pennsylvania Ave NW, Washington, DC 20500"
+          },
+          "diagnosis_date": "11/28/14",
+          "date_complete": "",
+          "symptoms": [
+            "Blood in urine",
+            "Hard of hearing",
+            "Partial vision loss"
+          ]
+        }
+      ],
+     "action_items": [
+        {
+        "item1": "Schedule a yearly heatlh checkup (<i>Dr. Harth</i>) (Oct 5 2019)",
+        "item2": "Come in for your flu shot (<i>Dr. Wilder</i>) (Oct 1 2019)",
+        "item3": "Call me for your post-op checkup (<i>Dr. Harth</i>) (Sep 26 2019"
+        }
+     ],
+     "analytics": [
+        {
+	     "predictions": [
+		    {
+		      "chance": 21,
+		      "condition": "Hypertensive Heart Disease"
+		    },
+		    {
+		      "chance": 62,
+		      "condition": "Alport Syndrome"
+		    },
+		    {
+		      "chance": 9,
+		      "condition": "Glaucoma"
+		    }
+          ],
+	      "quizzes": [
+		    {
+		      "date": "09/09/09",
+		      "source": "Facebook",
+		      "questions": [
+                {
+		        "Are you feeling any pain today?": "Yes",
+		        "How long has the event lasted?": "> 18hrs",
+		        "Do you suspect that the cause of your pain is undiagnosed?": "Yes",
+		        "Would you like to chat with a physician?": "No"
+                }
+              ]
+		    },
+		    {
+		      "date": "12/17/10",
+		      "source": "Buzzfeed",
+		      "questions": [
+                {
+		        "Do you have any questions about healthcare?": "No",
+		        "Are you content with your healthcare provider?": "Yes"
+                }
+              ]
+		    }
+           ]
+          }
+	    ],
+      "appointment": [
+        {
+          "scheduled_date": "10/8/19",
+          "scheduled_time": "October 8 at 3:30pm",
+          "location": "Appointment at Sanford Health Center",
+          "topic": "Symptom Diagnosis",
+          "patient_note": "N/A",
+          "doctor_note": "Health checkup",
+          "bill": [
+            {
+              "uuid": "44eb4ea1-7793-4e3b-8852-9f2cb2203644",
+              "date_posted": "8/22/19",
+              "amount": 100,
+              "payment_date": "8/22/19",
+              "co-pay": 20,
+              "payment_method": "52f678c4-72c0-43e3-9fea-d829fdd5223d"
+            }
+          ]
+        },
+        {
+          "scheduled_date": "10/10/19",
+          "scheduled_time": "October 10 at 1:30pm",
+          "location": "Chemotherapy at the Sanford Cancer Center",
+          "topic": "Chemotherapy Appointment",
+          "patient_note": "",
+          "doctor_note": "Round 3 of 10",
+          "bill": [
+            {
+              "uuid": "44eb4ea1-7793-4e3b-8852-9f2cb2203644",
+              "date_posted": "10/8/19",
+              "amount": 2000,
+              "payment_date": null,
+              "co-pay": 500,
+              "fee": [
+                {
+                  "description": "Blood Test",
+                  "amount": 87.0,
+                  "facility": "7a1fa457-a55f-4b23-af25-2382f2644a82"
+                }
+              ],
+              "payment_method": "52f678c4-72c0-43e3-9fea-d829fdd5223d"
+            }
+          ]
+        }
+      ],
+      "payment_method": [
+        {
+          "name": "visa",
+          "uuid": "52f678c4-72c0-43e3-9fea-d829fdd5223d",
+          "type": "credit card",
+          "active": true
+        },
+        {
+          "name": "bank",
+          "uuid": "81b2207c-e0fc-40a6-910a-b2ed2cb72c67",
+          "type": "bank",
+          "active": false
+        }
+      ],
+      "contact": {
+        "email": "csmith@e.com",
+        "cell": "+1-202-555-0167",
+        "home": "+1-303-555-0100"
+      },
+      "emergency_contact": [
+        {
+          "name": "Karen Smith",
+          "relationship": "Mother",
+          "email": "ksmith@emailexample.com",
+        	"cell": "+1-385-555-0184",
+        	"home": "+1-907-555-0184"
+        },
+        {
+          "name": "Bill Warren",
+          "relationship": "Friend",
+          "email": "bill.warren@tutanota.com",
+        	"cell": "+1-404-555-0108",
+        	"home": "+1-317-555-0191"
+        }
+      ],
+      "medication": [
+        {
+          "name": "Ondansetron",
+          "brand": "Zofran",
+          "id": "81ed6c68-8482-472a-a8ac-61c6b2051abb",
+          "dosage_mg": "Take 8:00 AM Daily",
+          "refill_date": "11/05/19",
+          "refill_date_tolerance_days": 1,
+          "independent_refill_count": 1
+        },
+        {
+          "name": "Promethazine",
+          "brand": "Promethegan",
+          "id": "7a6e8e3a-e4bd-463b-8bdc-e5e32c4adc69",
+          "dosage_mg": "Take Tuesday, Saturday",
+          "refill_date": "11/05/19",
+          "refill_date_tolerance_days": 7,
+        	"independent_refill_count": 5
+        }
+      ]
+    }
+  ]
+}

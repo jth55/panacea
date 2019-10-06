@@ -69,11 +69,20 @@ def analytics():
 def options():
     return render_template('options.html')
 
+@app.route('/estimate_price', methods=['GET', 'POST'])
+@login_required
+def estimate_price():
+    return render_template('estimate_price.html')
+
+@app.route('/static_estimate_price', methods=['GET', 'POST'])
+@login_required
+def static_estimate_price():
+    return render_template('static_price_estimate.html')
+
 @app.route('/pubkey_repo', methods=['GET', 'POST'])
 @login_required
 def pkrepo():
     return render_template('pubkey_repo.html')
-
 
 def get_json():
     """Returns json data for specified patient UUID, demo uses test json data """

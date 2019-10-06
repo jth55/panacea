@@ -10,8 +10,8 @@
 
 	    <div class="col-sm-12">
 
-        <div class="alert alert-success text-center" role="alert">
-          <b>Hey {{ patient.name }}, you're all caught up!</b>
+        <div class="alert alert-warning text-center" role="alert">
+          <b>Hey {{ patient.name }}, you have <i>3</i> action items.<br>Head over to <a href="/scheduling">scheduling</a> to check them out.</b>
         </div>
 
       </div>
@@ -28,15 +28,15 @@
                   <b>{{ visit[0] }}</b>
               </a>
         </div>
-        <div class="col-auto">
+        <div class="col-2">
             <span class="text-primary" data-feather="clock"></span>
             {{ visit[1] }}
         </div>
-        <div class="col-auto">
+        <div class="col-2">
             <span class="text-primary" data-feather="calendar"></span>
             <a href="{{ visit[2] }}">Add Reminder</a>
         </div>
-        <div class="col-3">
+        <div class="col-2">
             <span class="text-primary" data-feather="map-pin"></span>
             <a href="{{ visit[3] }}">Maps</a>
         </div>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="col-3">
-          <span class="text-primary" data-feather="calendar"></span>
+          <span class="textprimary" data-feather="calendar"></span>
             <a href="{{ prescription[2] }}">Add Reminder</a>
         </div>
         <div class="col-2">
@@ -81,7 +81,7 @@
 
 
           <a href="static/carl_smith.pdf"><button type="submit" class="btn btn-success">Download My File PDF</button></a>
-          <a href="data/patientData0.json"><button type="submit" class="btn btn-success">Download JSON File</button></a>
+          <a href="static/carl_smith.json"><button type="submit" class="btn btn-success">Download JSON File</button></a>
 
           </div>
       </div>

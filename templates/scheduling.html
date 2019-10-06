@@ -10,14 +10,14 @@
 
   <div class="col-sm-12">
 
-    <div style="font-size: 1.4em;" class="alert alert-warning" role="alert">
+    <div class="alert alert-warning" role="alert">
       <b>You have <i>3</i> action items:</b>
     </div>
 
-    <ul style="font-size: 1.3em;">
+    <ul style="font-size: 1em;">
       <li>Schedule a yearly heatlh checkup (<i>Dr. Harth</i>) (Oct 5 2019)</li>
       <li>Come in for your flu shot (<i>Dr. Wilder</i>) (Oct 1 2019)</li>
-      <li>Call me for your post-op checkup (<i>Dr. Harth</i>) (Sep 26 2019)</li>
+      <li>Call me for your post-op checkup (<i>Sanford Care Team</i>) (Sep 26 2019)</li>
     </ul>
 
   </div>
@@ -32,32 +32,30 @@
 
 <h4 class="py-2">My Upcoming Appointments</h4>
 
-    {% for visit in patient.visits %}
+{% for visit in patient.visits %}
 
-    <div class="row justify-content-center p-3 mt-1 bg-light" style="font-size:1.2em;">
-        <div class="col-6">
-              <a class="text-body" href="/systems">
-                  <b>{{ visit[0] }}</b>
-              </a>
-        </div>
-        <div class="col-auto">
-            <span class="text-primary" data-feather="clock"></span>
-            {{ visit[1] }}
-        </div>
-        <div class="col-auto">
-            <span class="text-primary" data-feather="calendar"></span>
-            <a href="{{ visit[2] }}">Add Reminder</a>
-        </div>
-        <div class="col-auto">
-            <span class="text-primary" data-feather="map-pin"></span>
-            <a href="{{ visit[3] }}">Maps</a>
-        </div>
-
+<div class="row justify-content-center p-3 mt-1 bg-light" style="font-size:1.2em;">
+    <div class="col-6">
+          <a class="text-body" href="/systems">
+              <b>{{ visit[0] }}</b>
+          </a>
+    </div>
+    <div class="col-2">
+        <span class="text-primary" data-feather="clock"></span>
+        {{ visit[1] }}
+    </div>
+    <div class="col-2">
+        <span class="text-primary" data-feather="calendar"></span>
+        <a href="{{ visit[2] }}">Add Reminder</a>
+    </div>
+    <div class="col-2">
+        <span class="text-primary" data-feather="map-pin"></span>
+        <a href="{{ visit[3] }}">Maps</a>
     </div>
 
+</div>
 
-    {% endfor %}
-
+{% endfor %}
 
     <div class="row pt-4 justify-content-center">
       <a href="/estimate_price.html"><button type="button" class="btn btn-primary">Get a Price Estimate for a Visit</button></a>
