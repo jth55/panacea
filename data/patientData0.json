@@ -76,7 +76,7 @@
         {
           "scheduled_date": "10/8/19",
           "scheduled_time": "1530",
-          "location": "7a1fa457-a55f-4b23-af25-2382f2644a82",
+          "location": "Appointment at Sanford Health Center",
           "topic": "Symptom Diagnosis",
           "patient_note": "N/A",
           "doctor_note": "Health checkup",
@@ -94,7 +94,7 @@
         {
           "scheduled_date": "10/10/19",
           "scheduled_time": "1130",
-          "location": "7a1fa457-a55f-4b23-af25-2382f2644a82",
+          "location": "Chemotherapy at the Sanford Cancer Center",
           "topic": "Chemotherapy Appointment",
           "patient_note": "",
           "doctor_note": "Round 3 of 10",
