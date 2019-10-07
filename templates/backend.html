@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %} Schedule Appointment {% endblock %}
+{% block header %}<h1>Scheduling</h1> {% endblock %}
+{% set active_page = "scheduling" %}
+
+{% block body %}
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Push out update for... (select individual or <a href="#">group</a>)</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Carl Smith</option>
+      <option>Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Push out...</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Action Item</option>
+      <option>Billing Item</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Content of action item.</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</form>
+
+<div class="row justify-content-center mt-4">
+  <button type="button" class="btn btn-primary" name="button">Submit</button>
+</div>
+{% endblock %}

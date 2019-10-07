@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block title %} Schedule Appointment {% endblock %}
+{% block header %}<h1>Scheduling</h1> {% endblock %}
+{% set active_page = "scheduling" %}
+
+{% block body %}
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address or Username</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">What's the reason for appointment?</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Routine Checkup</option>
+      <option>Pain / Injury</option>
+      <option>Concerns or Questions</option>
+      <option>Specialized Appointment</option>
+      <option>Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">What times work for you?</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>8:30 AM</option>
+      <option>9:00 AM</option>
+      <option>9:30 AM</option>
+      <option>10:00 AM</option>
+      <option>10:30 AM</option>
+      <option>11:00 AM</option>
+      <option>11:30 AM</option>
+      <option>12:00 PM</option>
+      <option>12:30 PM</option>
+      <option>1:00 PM</option>
+      <option>1:30 PM</option>
+      <option>2:00 PM</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Have anything else you want us to know?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</form>
+
+<div class="row justify-content-center mt-4">
+  <button type="button" class="btn btn-primary" name="button">Submit</button>
+</div>
+{% endblock %}

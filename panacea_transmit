@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [[ $1 == "keygen" ]]; then
+	openssl req -x509 -nodes -days 100000 -newkey rsa:2048 -keyout transfer-key.pem -out transfer-key.pem
+
+elif [[ $1 == "encrypt-data" ]]; then
+	#openssl smime -encrypt -aes256 -in $2 -binary -outform DEM -out encrypted_patient_data publickey.pem
+	echo "[##########]   100%   0.02s ===> $2 (Organization Name) (Verified)" # mockup output
+	echo "Would transmit encrypted file to organization $2"
+	
+elif [[ $1 == "decrypt-data" ]]; then
+     openssl smime -decrypt -in $2 -binary -inform DEM -inkey transfer.pem -out patient_data 
+	echo "Unencrypted data saved to patient_data"
+
+else
+    echo "Usage: ./panacea_transmit {[keygen] | [encrypt-data institution|decrypt-data file]}"
+fi
+
+

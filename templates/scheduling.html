@@ -17,7 +17,7 @@
     <ul style="font-size: 1em;">
       <li>Schedule a yearly heatlh checkup (<i>Dr. Harth</i>) (Oct 5 2019)</li>
       <li>Come in for your flu shot (<i>Dr. Wilder</i>) (Oct 1 2019)</li>
-      <li>Call me for your post-op checkup (<i>Sanford Care Team</i>) (Sep 26 2019)</li>
+      <li>Call for your post-op checkup (<i>Sanford Care Team</i>) (Sep 26 2019)</li>
     </ul>
 
   </div>
@@ -26,9 +26,8 @@
 
 <h4>What can we help you with today?</h4>
 
-<p style="font-size:1.6em;" class="pl-5 pt-2"><a href="schedule-appointment">Schedule an appointment</a></p>
-<p style="font-size:1.6em;" class="pl-5"><a href="ask-question">Ask a question</a></p>
-<p style="font-size:1.6em;" class="pl-5"><a href="schedule-appointment"></a></p>
+<p style="font-size:1.6em;" class="pl-5 pt-2"><a href="schedule_appointment">Schedule an appointment</a></p>
+<p style="font-size:1.6em;" class="pl-5"><a href="mailto:doctor@sanford.org">Ask a question</a></p>
 
 <h4 class="py-2">My Upcoming Appointments</h4>
 
@@ -44,12 +43,12 @@
         <span class="text-primary" data-feather="clock"></span>
         {{ visit[1] }}
     </div>
-    <div class="col-2">
-        <span class="text-primary" data-feather="calendar"></span>
+    <div class="col-2"><sub></sub>
+        <span data-feather="calendar"></span>
         <a href="{{ visit[2] }}">Add Reminder</a>
     </div>
     <div class="col-2">
-        <span class="text-primary" data-feather="map-pin"></span>
+        <span data-feather="map-pin"></span>
         <a href="{{ visit[3] }}">Maps</a>
     </div>
 
@@ -58,7 +57,7 @@
 {% endfor %}
 
     <div class="row pt-4 justify-content-center">
-      <a href="/estimate_price.html"><button type="button" class="btn btn-primary mx-2">Get a Price Estimate for a Visit</button></a>
+      <a href="/estimate_price"><button type="button" class="btn btn-primary mx-2">Get a Price Estimate for a Visit</button></a>
       <a href="http://uber.com"><button type="button" class="btn btn-primary mx-2">Book a Ride</button></a>
     </div>
 

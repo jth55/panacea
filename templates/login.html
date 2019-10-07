@@ -25,9 +25,26 @@
     <button type="submit" class="btn btn-primary">Login</button>
 </form>
 
+<script>
+  function showDiv() {
+   document.getElementById('helpLogin').style.display = "block";
+}
+</script>
+
 <div class="row justify-content-center mt-5">
-    <button type="submit" class="btn btn-success">I Need Help Getting into My Account</button>
+    <button type="button"name="answer" value="showDiv" class="btn btn-success">I Need Help Getting into My Account</button>
 </div>
+<!--
+<div class="row justify-content-center mt-3">
+  <a href="#" class="mx-1 btn btn-primary btn active" role="button" aria-pressed="true">
+    <span data-feather="mail"></span>
+    Send Password Reset Email
+  </a>
+  <a href="#" class="mx-1 btn active" role="button" aria-pressed="true">
+    <span data-feather="phone"></span>
+      Call a Representative</a>
+</div>-->
+
 
 
 {% endblock %}

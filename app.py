@@ -84,6 +84,16 @@ def static_estimate_price():
 def pkrepo():
     return render_template('pubkey_repo.html')
 
+@app.route('/schedule_appointment', methods=['GET', 'POST'])
+@login_required
+def schedule_appointment():
+    return render_template('schedule_appointment.html')
+
+@app.route('/backend', methods=['GET', 'POST'])
+@login_required
+def backend():
+    return render_template('backend.html')
+
 def get_json():
     """Returns json data for specified patient UUID, demo uses test json data """
     with open("data/patientData0.json", "r") as json_file:
