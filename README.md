@@ -1,3 +1,4 @@
+Hackathon project for the Sanford Tech Summit 2019
 
 # Panacea
 
